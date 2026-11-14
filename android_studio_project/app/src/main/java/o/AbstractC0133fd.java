@@ -1,0 +1,43 @@
+package o;
+
+import com.ffrt.proxyread.R;
+
+/* renamed from: o.fd, reason: case insensitive filesystem */
+/* loaded from: /workspaces/Vps/decoded_apk/../reversed_android_project/classes.dex */
+public abstract class AbstractC0133fd {
+    public static final int[] a = {R.attr.maxWidth, R.attr.maxHeight, R.attr.elevation, 2130903120, 2130903145, 2130903146, 2130903147, 2130903148, 2130903149, 2130903151, 2130903152, 2130903153, 2130903154, 2130903565, 2130903771, 2130903772, 2130903773, 2130903916, 2130903918, 2130903919, 2130903923, 2130903997, 2130904005, 2130904009};
+    public static final int[] b = {2130903202, 2130903203, 2130903204, 2130903205, 2130903206, 2130903207, 2130903208, 2130903209, 2130903210, 2130903211, 2130903212};
+    public static final int[] c = {R.attr.textAppearance, R.attr.textSize, R.attr.textColor, R.attr.ellipsize, R.attr.maxWidth, R.attr.text, R.attr.checkable, 2130903221, 2130903222, 2130903226, 2130903227, 2130903230, 2130903231, 2130903232, 2130903234, 2130903235, 2130903236, 2130903237, 2130903238, 2130903239, 2130903240, 2130903245, 2130903246, 2130903247, 2130903249, 2130903263, 2130903264, 2130903265, 2130903266, 2130903267, 2130903268, 2130903269, 2130903468, 2130903588, 2130903602, 2130903606, 2130903978, 2130903997, 2130904005, 2130904015, 2130904166, 2130904181};
+    public static final int[] d = {2130903259, 2130903262};
+    public static final int[] e = {2130903260, 2130903802, 2130903995};
+
+    /* renamed from: f, reason: collision with root package name */
+    public static final int[] f209f = {2130903143, 2130903144};
+    public static final int[] g = {2130903143};
+    public static final int[] h = {R.attr.foreground, R.attr.foregroundGravity, 2130903562};
+    public static final int[] i = {R.attr.inputType, R.attr.popupElevation, 2130903444, 2130904022, 2130904023, 2130904024, 2130904025};
+    public static final int[] j = {R.attr.background, R.attr.insetLeft, R.attr.insetRight, R.attr.insetTop, R.attr.insetBottom, R.attr.checkable, 2130903120, 2130903121, 2130903377, 2130903452, 2130903601, 2130903603, 2130903604, 2130903605, 2130903607, 2130903608, 2130903978, 2130903997, 2130904005, 2130904067, 2130904068, 2130904230};
+    public static final int[] k = {R.attr.enabled, 2130903219, 2130903994, 2130904028};
+    public static final int[] l = {R.attr.windowFullscreen, 2130903120, 2130903404, 2130903405, 2130903406, 2130903407, 2130903902, 2130903963, 2130904298, 2130904299, 2130904300};
+    public static final int[] m = {R.attr.insetLeft, R.attr.insetRight, R.attr.insetTop, R.attr.insetBottom, 2130903633, 2130903645, 2130903646, 2130903653, 2130903654, 2130903659};
+    public static final int[] n = {R.attr.button, 2130903183, 2130903185, 2130903187, 2130903188, 2130903192, 2130903213, 2130903228, 2130903469, 2130903476, 2130904270};
+
+    /* renamed from: o, reason: collision with root package name */
+    public static final int[] f210o = {2130903192, 2130904270};
+    public static final int[] p = {2130903997, 2130904005};
+    public static final int[] q = {R.attr.letterSpacing, R.attr.lineHeight, 2130903748};
+    public static final int[] r = {R.attr.textAppearance, R.attr.lineHeight, 2130903748};
+    public static final int[] s = {2130903767, 2130903769, 2130903896, 2130904076, 2130904216};
+    public static final int[] t = {2130903802};
+    public static final int[] u = {2130903150};
+    public static final int[] v = {2130903372, 2130903373, 2130903374, 2130903375, 2130903376, 2130903378, 2130903379, 2130903380, 2130903381, 2130903382};
+    public static final int[] w = {R.attr.maxWidth, R.attr.maxHeight, R.attr.elevation, 2130903120, 2130903145, 2130903371, 2130903997, 2130904005};
+    public static final int[] x = {R.attr.enabled, R.attr.value, R.attr.stepSize, R.attr.valueFrom, R.attr.valueTo, 2130903579, 2130903580, 2130903665, 2130903666, 2130903839, 2130904188, 2130904189, 2130904190, 2130904195, 2130904196, 2130904197, 2130904201, 2130904202, 2130904203, 2130904204, 2130904205, 2130904209, 2130904210, 2130904211, 2130904244, 2130904245, 2130904246, 2130904251, 2130904252, 2130904253};
+    public static final int[] y = {R.attr.maxWidth, 2130903076, 2130903093, 2130903117, 2130903120, 2130903121, 2130903452, 2130903822, 2130903997, 2130904005};
+    public static final int[] z = {2130904270};
+    public static final int[] A = {R.attr.textSize, R.attr.typeface, R.attr.textStyle, R.attr.textColor, R.attr.textColorHint, R.attr.textColorLink, R.attr.shadowColor, R.attr.shadowDx, R.attr.shadowDy, R.attr.shadowRadius, R.attr.fontFamily, R.attr.textFontWeight, 2130903548, 2130903558, 2130904121, 2130904176};
+    public static final int[] B = {2130904171};
+    public static final int[] C = {R.attr.enabled, R.attr.textColorHint, R.attr.maxWidth, R.attr.minWidth, R.attr.hint, R.attr.maxEms, R.attr.minEms, 2130903166, 2130903167, 2130903168, 2130903169, 2130903170, 2130903171, 2130903172, 2130903173, 2130903174, 2130903175, 2130903176, 2130903383, 2130903384, 2130903385, 2130903386, 2130903387, 2130903388, 2130903391, 2130903392, 2130903458, 2130903459, 2130903460, 2130903461, 2130903462, 2130903463, 2130903464, 2130903465, 2130903470, 2130903471, 2130903472, 2130903473, 2130903474, 2130903475, 2130903477, 2130903478, 2130903481, 2130903583, 2130903584, 2130903585, 2130903586, 2130903592, 2130903593, 2130903594, 2130903595, 2130903927, 2130903928, 2130903929, 2130903930, 2130903931, 2130903940, 2130903941, 2130903942, 2130903949, 2130903950, 2130903951, 2130903997, 2130904005, 2130904047, 2130904048, 2130904049, 2130904050, 2130904051, 2130904052, 2130904053, 2130904080, 2130904081, 2130904082};
+    public static final int[] D = {R.attr.textAppearance, 2130903466, 2130903467};
+    public static final int[] E = {R.attr.textAppearance, R.attr.textColor, R.attr.padding, R.attr.layout_margin, R.attr.minWidth, R.attr.minHeight, R.attr.text, 2130903120, 2130904014};
+}

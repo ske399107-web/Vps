@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <permission
+        android:name="com.ffrt.proxyread.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.ffrt.proxyread.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <queries>
+        <package android:name="com.dts.freefireth" />
+        <package android:name="com.dts.freefiremax" />
+    </queries>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:label="@string/app_name"
+        android:name="com.ffrt.proxyread.ProxyApp"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProxyRead"
+        android:extractNativeLibs="false">
+
+        <activity
+            android:name="com.ffrt.proxyread.LoginActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.ProxyRead.Login"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.ffrt.proxyread.MainActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.ProxyRead.Home"
+            android:windowSoftInputMode="adjustResize" />
+
+        <receiver
+            android:name="com.ffrt.proxyread.AdbPairReceiver"
+            android:exported="false" />
+
+        <service
+            android:name="com.ffrt.proxyread.HudAccessService"
+            android:exported="false"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/hud_access" />
+        </service>
+
+        <service
+            android:name="com.ffrt.proxyread.VpnCaptureService"
+            android:exported="false"
+            android:permission="android.permission.BIND_VPN_SERVICE"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="No-root UDP/RUDP capture for authorized FF lab" />
+        </service>
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.ffrt.proxyread.androidx-startup"
+            android:exported="false">
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:exported="true"
+            android:permission="android.permission.DUMP"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>

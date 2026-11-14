@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip">
+        <TextView android:textSize="11.0sp" android:textColor="@color/muted" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="KÍCH THƯỚC" android:includeFontPadding="false" android:layout_weight="1.0" android:letterSpacing="0.08" />
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/accent" android:id="@id/radarSizeValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100%" android:includeFontPadding="false" android:fontFamily="monospace" />
+    </LinearLayout>
+    <com.google.android.material.slider.Slider android:value="100" android:id="@id/radarSize" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stepSize="5.0" android:contentDescription="Kích thước radar" android:valueFrom="70" android:valueTo="180" app:haloColor="#2242f2b3" app:labelBehavior="gone" app:thumbColor="@color/accent" app:thumbRadius="6.0dip" app:tickVisible="false" app:trackColorActive="@color/accent" app:trackColorInactive="@color/stroke" app:trackHeight="3.0dip" />
+</merge>

@@ -1,0 +1,40 @@
+package o;
+
+/* renamed from: o.d3, reason: case insensitive filesystem */
+/* loaded from: /workspaces/Vps/decoded_apk/../reversed_android_project/classes.dex */
+public final class C0083d3 {
+    public static final byte[] e = new byte[1792];
+    public final CharSequence a;
+    public final int b;
+    public int c;
+    public char d;
+
+    static {
+        for (int i = 0; i < 1792; i++) {
+            e[i] = Character.getDirectionality(i);
+        }
+    }
+
+    public C0083d3(CharSequence charSequence) {
+        this.a = charSequence;
+        this.b = charSequence.length();
+    }
+
+    public final byte a() {
+        int i = this.c - 1;
+        CharSequence charSequence = this.a;
+        char charAt = charSequence.charAt(i);
+        this.d = charAt;
+        if (Character.isLowSurrogate(charAt)) {
+            int codePointBefore = Character.codePointBefore(charSequence, this.c);
+            this.c -= Character.charCount(codePointBefore);
+            return Character.getDirectionality(codePointBefore);
+        }
+        this.c--;
+        char c = this.d;
+        if (c < 1792) {
+            return e[c];
+        }
+        return Character.getDirectionality(c);
+    }
+}

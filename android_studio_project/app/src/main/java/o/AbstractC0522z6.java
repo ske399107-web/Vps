@@ -1,0 +1,70 @@
+package o;
+
+import android.graphics.Rect;
+import android.view.View;
+import org.bouncycastle.asn1.cmp.PKIFailureInfo;
+
+/* renamed from: o.z6, reason: case insensitive filesystem */
+/* loaded from: /workspaces/Vps/decoded_apk/../reversed_android_project/classes.dex */
+public abstract class AbstractC0522z6 {
+    public int a;
+    public final Object b;
+    public final Object c;
+
+    public AbstractC0522z6(AbstractC0431ud abstractC0431ud) {
+        this.a = PKIFailureInfo.systemUnavail;
+        this.c = new Rect();
+        this.b = abstractC0431ud;
+    }
+
+    public static AbstractC0522z6 a(AbstractC0431ud abstractC0431ud, int i) {
+        if (i != 0) {
+            if (i == 1) {
+                return new C0370rc(abstractC0431ud, 1);
+            }
+            throw new IllegalArgumentException("invalid orientation");
+        }
+        return new C0370rc(abstractC0431ud, 0);
+    }
+
+    public abstract int b(View view);
+
+    public abstract int c(View view);
+
+    public abstract int d(View view);
+
+    public abstract int e(View view);
+
+    public abstract int f();
+
+    public abstract int g();
+
+    public abstract int h();
+
+    public abstract int i();
+
+    public abstract int j();
+
+    public abstract int k();
+
+    public abstract int l();
+
+    public int m() {
+        if (Integer.MIN_VALUE == this.a) {
+            return 0;
+        }
+        return l() - this.a;
+    }
+
+    public abstract int n(View view);
+
+    public abstract int o(View view);
+
+    public abstract void p(int i);
+
+    public AbstractC0522z6(B6 b6) {
+        this.a = 0;
+        this.c = new C0423u5();
+        this.b = b6;
+    }
+}

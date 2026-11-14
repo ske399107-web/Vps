@@ -1,0 +1,12 @@
+package org.bouncycastle.util.encoders;
+
+/* loaded from: /workspaces/Vps/decoded_apk/../reversed_android_project/classes.dex */
+public interface Translator {
+    int decode(byte[] bArr, int i, int i2, byte[] bArr2, int i3);
+
+    int encode(byte[] bArr, int i, int i2, byte[] bArr2, int i3);
+
+    int getDecodedBlockSize();
+
+    int getEncodedBlockSize();
+}

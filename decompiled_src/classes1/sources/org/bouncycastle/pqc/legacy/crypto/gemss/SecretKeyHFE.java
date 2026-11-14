@@ -1,0 +1,23 @@
+package org.bouncycastle.pqc.legacy.crypto.gemss;
+
+/* JADX INFO: Access modifiers changed from: package-private */
+/* loaded from: /workspaces/Vps/decoded_apk/../reversed_android_project/classes.dex */
+public class SecretKeyHFE {
+    public Pointer F_HFEv;
+    complete_sparse_monic_gf2nx F_struct;
+    public Pointer S;
+    public Pointer T;
+    public Pointer sk_uncomp;
+
+    /* loaded from: /workspaces/Vps/decoded_apk/../reversed_android_project/classes.dex */
+    public static class complete_sparse_monic_gf2nx {
+        public int[] L;
+        public Pointer poly;
+    }
+
+    public SecretKeyHFE(GeMSSEngine geMSSEngine) {
+        complete_sparse_monic_gf2nx complete_sparse_monic_gf2nxVar = new complete_sparse_monic_gf2nx();
+        this.F_struct = complete_sparse_monic_gf2nxVar;
+        complete_sparse_monic_gf2nxVar.L = new int[geMSSEngine.NB_COEFS_HFEPOLY];
+    }
+}

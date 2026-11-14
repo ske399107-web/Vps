@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/bg_login" android:focusable="true" android:focusableInTouchMode="true" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:paddingTop="14.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="22.0dip" android:paddingEnd="22.0dip">
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CRG PROXY" android:includeFontPadding="false" android:letterSpacing="0.14" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/muted" android:id="@id/sessionLine" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="Proxy trên trận · không chặn chạm" android:includeFontPadding="false" />
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/danger" android:id="@id/refuseLine" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:includeFontPadding="false" />
+        </LinearLayout>
+        <View android:background="#1a42f2b3" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="22.0dip" android:layout_marginEnd="22.0dip" />
+        <ScrollView android:paddingTop="8.0dip" android:paddingBottom="16.0dip" android:scrollbars="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0" android:overScrollMode="never" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:background="@drawable/bg_login_card" android:paddingTop="18.0dip" android:paddingBottom="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="18.0dip" android:paddingEnd="18.0dip" android:elevation="8.0dip">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <FrameLayout android:background="@drawable/bg_login_mark" android:layout_width="40.0dip" android:layout_height="40.0dip">
+                            <ImageView android:layout_gravity="center" android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/ic_login_radar" android:contentDescription="@null" />
+                        </FrameLayout>
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Proxy" android:includeFontPadding="false" android:layout_weight="1.0" android:layout_marginStart="12.0dip" />
+                        <TextView android:textColor="@color/warn" android:id="@id/vpnChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tắt" style="@style/Widget.ProxyRead.Chip" />
+                    </LinearLayout>
+                    <TextView android:textSize="12.0sp" android:textColor="@color/muted" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="Bật proxy để bắt gói. Radar, ESP và Moco bật riêng, không tắt VPN." />
+                    <include layout="@layout/radar_toggle_block" />
+                    <include layout="@layout/radar_size_block" />
+                    <include layout="@layout/esp_toggle_block" />
+                    <include layout="@layout/moco_toggle_block" />
+                    <com.google.android.material.button.MaterialButton android:textSize="15.0sp" android:textStyle="bold" android:id="@id/btnVpn" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_marginTop="8.0dip" android:text="Bật proxy" android:letterSpacing="0.04" style="@style/Widget.ProxyRead.LoginButton" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:background="@drawable/bg_login_card" android:paddingTop="18.0dip" android:paddingBottom="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:paddingStart="18.0dip" android:paddingEnd="18.0dip" android:elevation="8.0dip">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <FrameLayout android:background="@drawable/bg_home_adb_mark" android:layout_width="40.0dip" android:layout_height="40.0dip">
+                            <ImageView android:layout_gravity="center" android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/ic_home_adb" android:contentDescription="@null" />
+                        </FrameLayout>
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="ADB trên máy" android:includeFontPadding="false" android:layout_weight="1.0" android:layout_marginStart="12.0dip" />
+                        <TextView android:textColor="@color/muted" android:id="@id/adbChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chưa nối" style="@style/Widget.ProxyRead.Chip" />
+                    </LinearLayout>
+                    <TextView android:textSize="12.0sp" android:textColor="@color/muted" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="Gỡ lỗi không dây → ghép mã 6 số. IP/cổng tự quét." />
+                    <TextView android:textSize="11.0sp" android:textColor="@color/muted" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="MÃ 6 SỐ" android:includeFontPadding="false" android:letterSpacing="0.14" />
+                    <EditText android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/text" android:textColorHint="@color/muted" android:gravity="center" android:id="@id/pairCode" android:background="@drawable/bg_home_field" android:layout_width="fill_parent" android:layout_height="54.0dip" android:layout_marginTop="8.0dip" android:hint="••••••" android:maxLength="6" android:inputType="number" android:imeOptions="actionDone" android:fontFamily="monospace" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" android:letterSpacing="0.28" android:importantForAutofill="no" />
+                    <com.google.android.material.button.MaterialButton android:textSize="15.0sp" android:textStyle="bold" android:id="@id/btnAdb" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="12.0dip" android:text="Ghép nối" android:letterSpacing="0.04" style="@style/Widget.ProxyRead.GhostButton" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/muted" android:gravity="center" android:id="@id/adbStatus" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:minHeight="16.0dip" android:text="Chưa nối adbd trên máy." />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+        <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="@color/text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="ESP LINE / BOX (test)" android:includeFontPadding="false" android:layout_weight="1.0" android:letterSpacing="0.06" />
+        <com.google.android.material.switchmaterial.SwitchMaterial android:id="@id/espSwitch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="ESP LINE BOX" app:thumbTint="@color/accent" app:trackTint="@color/stroke" />
+    </LinearLayout>
+</merge>
